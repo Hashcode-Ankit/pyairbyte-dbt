@@ -1,7 +1,8 @@
 from  dbt_generator import DBTAirbyte
+import os
 
 def main():
-    workspace = "/Users/apple/Desktop/Airbyte OS/pyairbyte-dbt/pyairbyte_dbt_gen/.dbt_workspace"
+    workspace = os.curdir
     dbt_airbyte = DBTAirbyte("demo_project",workspace,"demo_profile")
     dbt_airbyte.setup_db_profile("clickhouse","username","password","host",443)
 
